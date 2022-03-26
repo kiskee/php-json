@@ -1,0 +1,9 @@
+
+git status
+git add .
+git commit -m ""
+git branch -M main
+git remote add origin https://github.com/kiskee/php-json.git
+git remote rm origin
+git remote add origin https://github.com/kiskee/php-json.git
+git push -u origin main

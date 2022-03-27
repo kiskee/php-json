@@ -1,0 +1,37 @@
+body{
+    background-color:rgb(255, 255, 255);
+}
+
+header{
+    background-color: rgb(24, 109, 181);
+    
+}
+
+
+nav li{
+    display: inline;
+}
+
+h1 {
+    color: #d65d0c;
+    font-family: arial, sans-serif;  
+    font-weight: bold;
+    margin-top: 0px;
+    margin-bottom: 1px;
+    }
+
+a:link, a:visited {
+    background-color: rgb(24, 109, 181);
+    color: black;
+    border: 1px;
+    border-color: aliceblue;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+}
+      
+a:hover, a:active {
+    background-color: rgb(207, 70, 7);
+    color: white;
+}

@@ -11,8 +11,9 @@
 	<title>Talent.com</title>
 </head>
 <header >
+  <center>
 <nav >
-      <ul >
+      <ul class="menuHeader">
         <li >
         <a href="login.php">Home</a>
         </li>
@@ -22,16 +23,21 @@
         <li >
           <a  href="table.php">X table</a>
         </li>
+        <li>
+        <a href="logout.php">Log Out</a>
+        </li>
+        <li>
+        <a href="update.php">Update User</a>
+        </li>
         <br>
         
       </ul>
       
-    </div>
-    <form >
-      <a href="logout.php">Log Out</a>
-     <a href="update.php">Update User</a>
-      </form>
-  </div>
-</nav>
+   
     
+   
+    
+
+</nav>
+</center>   
   </header>

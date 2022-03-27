@@ -1,11 +1,10 @@
 {
     "0": {
         "id": 1,
-        "name": "nielad",
         "username": "nielad",
-        "password": "123",
         "email": "nielad@nielad.com",
         "phone": "2699821",
-        "website": "nielad.com"
+        "password": "123",
+        "cpassword":"123"
     }
 }

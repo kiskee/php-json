@@ -1,9 +1,86 @@
 <?php
 session_start();
 require __DIR__.'/partials/users.php';
-ensure_user_is_authenticated();
+//ensure_user_is_authenticated();
 $users = getUsers();
 include 'partials/header.php';
+
+$user=[
+    'id' => '',
+    'username' => '',
+    'email' => '',
+    'phone' => '',
+    'password' => '',
+    'cpassword' => ''
+];
+
+if(isset($_POST['submit'])){
+    $username = $_POST['name'];
+    $email = $_POST['email'];
+    $phone = $_POST['phone'];
+    $password = $_POST['password'];
+    $cpassword = $_POST['cpassword'];
+    $valid = true;
+    if(!filter_var($username,FILTER_VALIDATE_REGEXP,array("options" => array("regexp"=>'/^[a-zA-Z]+$/')))){
+        $error = '<div class="alert alert-dismissible alert-warning text-center">
+                    the Username only contain letters
+                 </div>';
+        $valid = false;
+    }
+    if(!filter_var(
+        $email,FILTER_VALIDATE_REGEXP,array(
+             "options" => array("regexp"=>"/^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/")
+        ))){
+        $error = '<div class="alert alert-dismissible alert-warning">
+        enter a valid email
+     </div>';
+        $valid = false;
+    }
+    if(!filter_var($phone,FILTER_VALIDATE_REGEXP,array(
+        "options" => array("regexp"=>"/^[0-9\-\+]{9,15}$/")
+    ))){
+        $error = '<div class="alert alert-dismissible alert-warning">
+        enter a valid phone
+     </div>';
+        $valid = false;
+    }
+    if(!filter_var($password,FILTER_VALIDATE_REGEXP,array(
+        "options" => array("regexp"=>'/^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[*-.]).{6,}$/')
+    ))){
+        $error = '<div class="alert alert-dismissible alert-warning">
+        enter a valid password
+     </div>';
+        $valid = false;
+    }
+    if(!filter_var($cpassword,FILTER_VALIDATE_REGEXP,array(
+        "options" => array("regexp"=>'/^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[*-.]).{6,}$/')
+    ))){
+        $error = '<div class="alert alert-dismissible alert-warning">
+        enter a valid password
+     </div>';
+        $valid = false;
+    }
+    if($valid){
+        if($password == $cpassword){
+            $user = createUser($_POST);
+            redirect('index.php'); 
+    
+        }else{
+            echo "<script>alert('Password Not Matched.')</script>";
+    
+            
+        }
+
+
+
+
+
+
+    }
+
+
+   
+}
 
 ?>
 <center>
@@ -15,7 +92,9 @@ include 'partials/header.php';
 			</div>
 <form action="" method="post" class="login-email">
 <div class="login-form">
+    <div id="error">
     <?php echo $error??''; ?>
+    </div>
     <label for="name">UserName: </label><br>
     <input type="text" name="name"  required value="<?php echo $username??''; ?>" placeholder="Only contains letters"><br>
     <label for="name">Email: </label><br>

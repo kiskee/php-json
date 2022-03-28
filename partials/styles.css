@@ -43,3 +43,7 @@ a:hover, a:active {
     border: solid  violet;
     border-style: outset;
 }
+
+#error{
+    color: red;
+}

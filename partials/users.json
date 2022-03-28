@@ -1,18 +1,45 @@
-{
-    "0": {
+[
+    {
         "id": 1,
         "username": "nielad",
         "email": "nielad@nielad.com",
         "phone": "2699821",
         "password": "123",
-        "cpassword":"123"
+        "cpassword": "123"
     },
-    "1": {
+    {
         "id": 1,
         "username": "ligi",
         "email": "ligi@ligi.com",
         "phone": "2699821",
         "password": "123",
-        "cpassword":"123"
+        "cpassword": "123"
+    },
+    {
+        "name": "santi",
+        "email": "santi@santi.com",
+        "phone": "+573012138273",
+        "password": "Jorge0516*",
+        "cpassword": "Jorge0516*",
+        "submit": "",
+        "id": 14192811
+    },
+    {
+        "name": "santi",
+        "email": "santi@santi.com",
+        "phone": "+573012138273",
+        "password": "Jorge0516*",
+        "cpassword": "Jorge0516*",
+        "submit": "",
+        "id": 7799798
+    },
+    {
+        "name": "ligi",
+        "email": "ligia@ligia.com",
+        "phone": "3012138273",
+        "password": "Jorge16*",
+        "cpassword": "Jorge16*",
+        "submit": "",
+        "id": 9135867
     }
-}
+]

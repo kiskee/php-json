@@ -1,6 +1,25 @@
 <?php
+session_start();
+require __DIR__.'/partials/users.php';
+if(is_authenticated()){
+    redirect('index.php');
+    die();
+}
+if($_SERVER['REQUEST_METHOD']== 'POST'){
+   // print_r ($_POST);
+   $email = filter_input(INPUT_POST,'email',FILTER_VALIDATE_EMAIL);
+   $password = $_POST['password'];
+//compare with data store
+if(aunthenticate_user($email,$password)){
+    $_SESSION['email'] = $email;
+    redirect('index.php');   
+}else{
+    $status = 'the privided credentials didnt not work';
+    //echo '<script language="javascript">alert("the privided credentials didnt not work");</script>';
+}
+}
 include 'partials/header.php';
-error_reporting(0);
+
 ?>
 <br>
 <div >

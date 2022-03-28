@@ -24,7 +24,7 @@
           <a  href="table.php">X table</a>
         </li>
         <li>
-        <a href="logout.php">Log Out</a>
+        <a href="logout.php">Logout</a>
         </li>
         <li>
         <a href="update.php">Update User</a>

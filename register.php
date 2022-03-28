@@ -1,7 +1,9 @@
 <?php
+session_start();
+require __DIR__.'/partials/users.php';
+ensure_user_is_authenticated();
+$users = getUsers();
 include 'partials/header.php';
-include 'partials/users.php';
-error_reporting(0);
 
 ?>
 <center>

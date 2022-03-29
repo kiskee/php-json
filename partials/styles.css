@@ -1,27 +1,38 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
 body{
     background-color:rgb(255, 255, 255);
+    /*background-image: url("fondo4.jpg");*/
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: rgb(243, 156, 18);
+    font-family: 'Open Sans', sans-serif;
 }
 
 header{
-    background-color: rgb(255, 255, 255);
+    /*background-color: rgba(0, 0, 0, 0.2);*/
+    /*background-color: rgba(0, 0, 0, 0.2);*/
+   
     
 }
 
 
-nav li{
-    display: inline;
-}
+
 
 h1 {
-    color: #d65d0c;
+    color: #000000;
     font-family: arial, sans-serif;  
     font-weight: bold;
     margin-top: 0px;
     margin-bottom: 1px;
     }
-
+/*
 a:link, a:visited {
-    background-color: rgb(24, 109, 181);
+    background-color: rgb(108, 52, 131 );
     color: black;
     border: 1px;
     border-color: aliceblue;
@@ -29,21 +40,81 @@ a:link, a:visited {
     text-align: center;
     text-decoration: none;
     display: inline-block;
+    border: solid  black;
+    border-radius: 15px;
+    
 }
       
 a:hover, a:active {
-    background-color: rgb(207, 70, 7);
+    background-color: rgb(203, 67, 53);
     color: white;
-}
+}*/
 
 #login{
-    background-color: black;
-    color: white;
+    background-color: rgba(0, 0, 0, 0.2);
+    color: black;
     width: 30%;
-    border: solid  violet;
+    border: solid  black;
     border-style: outset;
 }
 
 #error{
     color: red;
+}
+
+/*input{
+    border-radius: 5px;
+}*/
+footer{
+     background-color: rgba(0, 0, 0, 0.2);
+}
+
+/* BEM STYLES FORMAT*/
+
+.container {
+	max-width: 1000px;
+	width: 90%;
+	margin: 0 auto;
+}
+
+.botton{
+    border: none;
+    min-width: 180px;
+    height: 40px;
+    padding: 0 30px;
+    background: #000;
+    color: #fff;
+    display: inline-block;
+    border-radius: 100px;
+    text-decoration: none;
+    display: inline-flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #403CC2;
+    transition: .3s ease all;
+}
+
+.botton:hover{
+    background: #1B1881;
+    text-decoration: none;
+}
+
+.botton--down{
+    position: absolute;
+    right: 20px;
+    bottom: -25px;
+}
+
+.card{
+    background: #fff;
+    border-radius: 15px;
+    padding: 20px;
+    display: inline-block;
+    align-items: center;
+    position: relative;
+    margin-bottom: 50px;
+}
+
+.input-group{
+    display: table;
 }
